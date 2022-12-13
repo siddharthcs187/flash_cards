@@ -1,6 +1,8 @@
 import 'package:flash_cards/quest.dart';
 import 'package:flutter/material.dart';
 
+import 'package:flash_cards/main.dart';
+
 class QuestCard extends StatelessWidget {
   final Quest quest;
 
@@ -55,7 +57,7 @@ class QuestCard extends StatelessWidget {
                   ),
                   SizedBox(height:1),
                   Spacer(),
-                  IconButton( icon: Icon(Icons.delete), onPressed: () {  }, alignment: Alignment.bottomRight,color: Colors.black,)
+                  IconButton( icon: Icon(Icons.delete), onPressed: () {}, alignment: Alignment.bottomRight,color: Colors.black,)
                 ],
               ),
             ),

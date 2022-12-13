@@ -1,4 +1,6 @@
 
+
+import 'package:flash_cards/new_card.dart';
 import 'package:flash_cards/practice.dart';
 import 'package:flash_cards/quest.dart';
 import 'package:flash_cards/quest_card.dart';
@@ -9,6 +11,7 @@ void main() => runApp(MaterialApp(
   routes: {
     '/card' : (context)=>CardList(),
     '/pract' : (context)=>Practicing(),
+    '/add' : (context)=>NewCard(quest: Quest(question: "New Question", answer: "New Answer", index: 11),)
 },
 ));
 
@@ -30,6 +33,9 @@ class _CardListState extends State<CardList> {
     Quest(question: 'six', answer: '6', index: 5),
     Quest(question: 'seven', answer: '7', index: 6),
     Quest(question: 'eight', answer: '6', index: 7),
+    Quest(question: 'nine', answer: '9', index: 8),
+    Quest(question: 'ten', answer: '10', index: 9),
+    Quest(question: 'eleven', answer: '11', index: 10),
 
   ];
   @override
@@ -95,7 +101,9 @@ class _CardListState extends State<CardList> {
               ),
               floatingActionButton: FloatingActionButton(
                 backgroundColor: Colors.blue,
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.pushNamed(context, '/add');
+                },
                 child: const Icon(Icons.add, color: Colors.indigo,),
               ),
 

@@ -59,7 +59,7 @@ class _PracticingState extends State<Practicing> {
                                           Text("Card #1"),
                                           Spacer(),
                                           Text(
-                                            'Title',
+                                            'one',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                               fontSize: 30,
