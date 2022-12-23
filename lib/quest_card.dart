@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flash_cards/main.dart';
 
 class QuestCard extends StatelessWidget {
-  final Quest quest;
-
-  const QuestCard({super.key, required this.quest});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +28,7 @@ class QuestCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [ Text(
-                      quest.question,
+                      'quest.question',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 30,
@@ -45,7 +42,7 @@ class QuestCard extends StatelessWidget {
 
                   SizedBox(height: 2,),
                   Text(
-                    quest.answer,
+                    'dataset.answer',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 16.5,

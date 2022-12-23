@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flash_cards/quest_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_cards/main.dart';
@@ -18,9 +19,11 @@ class _NewCardState extends State<NewCard> {
 
   @override
   Widget build(BuildContext context) {
-    void cardnew(){
-      Quest(question: _questionController.text, answer: _answerController.text, index: 11);
-      Navigator.pushNamed(context, '/card');
+    Future cardNew() async{
+        final docDataset = FirebaseFirestore.instance.collection('dataset').doc();
+        final dataset = Dataset(answer: _answerController.text, question: _questionController.text,);
+        final json = dataset.toJson();
+        await docDataset.set(json);
     }
     return SafeArea(
         child: Container(
@@ -77,7 +80,7 @@ class _NewCardState extends State<NewCard> {
                                             labelText: 'Answer',
                                           ),
                                         ),
-                                        TextButton(onPressed: () =>cardnew(), child: Text("Add")),
+                                        TextButton(onPressed: () {cardNew(); Navigator.pushNamed(context, '/card');}, child: Text("Add")),
 
                                         Spacer(),
                                       ],
@@ -117,4 +120,19 @@ class _NewCardState extends State<NewCard> {
             ),),)
     );
   }
+}
+class Dataset{
+  final String question;
+  final String answer;
+
+  Dataset({
+    required this.answer, required this.question,
+});
+
+  Map<String, dynamic> toJson() =>{
+    'question' : question,
+    'answer' : answer
+  };
+  static Dataset fromJson(Map<String, dynamic> json) => Dataset(answer: json['answer'], question: json['question']);
+
 }

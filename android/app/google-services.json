@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "514380928389",
+    "project_id": "flashcards-b67fb",
+    "storage_bucket": "flashcards-b67fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514380928389:android:9b113c36e536952cc560ec",
+        "android_client_info": {
+          "package_name": "com.example.flash_cards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514380928389-bedn9v9tnlk4m6gfeqkj7j7ighhqt3fc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcv-NnkGFmF9MqjudglpLdBPMdBHYcp_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514380928389-bedn9v9tnlk4m6gfeqkj7j7ighhqt3fc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "514380928389-77cgg1afhlv8ka69d5kc8125pisprdsl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flashCards"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
